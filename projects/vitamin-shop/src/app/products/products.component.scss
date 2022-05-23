@@ -1,0 +1,21 @@
+@import "../../styles";
+
+:host {
+  display: flex;
+  flex-direction: column;
+}
+
+.product {
+  @include default-div;
+
+  &:hover {
+    @include link;
+    text-decoration: none;
+    background: linear-gradient(90deg, rgba(234, 245, 254, 1) 80%, rgba(255, 255, 255, 1) 100%);
+    box-shadow: 0 0 0 1px #0000005c;
+  }
+
+  p {
+    margin: 5px;
+  }
+}

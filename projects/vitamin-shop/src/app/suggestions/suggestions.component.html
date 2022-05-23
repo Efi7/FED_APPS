@@ -1,0 +1,8 @@
+<div *ngFor="let product of suggestionsList" class="product">
+  <div>
+    <p><b>name: </b>{{product.name}}</p>
+    <p><b>price: </b>{{product.price | currency}}</p>
+  </div>
+</div>
+<hr>
+<p *ngIf="!suggestionsList.length">Add some products to the cart first.</p>

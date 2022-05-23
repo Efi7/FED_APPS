@@ -1,0 +1,10 @@
+<p class="link" (click)="addToCart(product.id)">add {{ product.name }} to cart</p>
+<div class="product">
+  <p class="header">{{ product.name }} Details</p>
+  <div class="product-details" *ngIf="product">
+    <p><b>name: </b>{{ product.name }}</p>
+    <p><b>price: </b>{{ product.price | currency }}</p>
+    <p><b>description: </b>{{ product.description }}</p>
+  </div>
+</div>
+<p class="link" [routerLink]="'/products'">back to products list</p>

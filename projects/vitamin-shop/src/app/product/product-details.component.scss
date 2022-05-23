@@ -1,0 +1,26 @@
+@import "../../styles.scss";
+
+.product {
+  @include default-div;
+
+  .header {
+    margin: 5px;
+    font-size: 30px;
+    font-weight: 700;
+  }
+
+  .product-details {
+    p {
+      @include regular-paragraph;
+    }
+  }
+}
+
+.link {
+  margin: 5px;
+  transition: 400ms;
+
+  &:hover {
+    @include link;
+  }
+}

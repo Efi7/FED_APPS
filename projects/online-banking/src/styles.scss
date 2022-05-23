@@ -1,0 +1,25 @@
+/* You can add global styles to this file, and also import other style files */
+:root {
+  cursor: default;
+  font-family: system-ui;
+}
+
+@mixin link {
+  cursor: pointer;
+  color: #611196;
+  text-decoration: underline;
+  transition: 400ms;
+}
+
+@mixin regular-paragraph {
+  margin: 5px;
+  transition: 400ms;
+}
+
+@mixin default-div {
+  border: black 1px solid;
+  padding: 5px;
+  border-radius: 5px;
+  margin: 5px;
+  transition: 400ms;
+}

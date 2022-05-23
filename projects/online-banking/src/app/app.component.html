@@ -1,0 +1,10 @@
+<div style="position: sticky;  top: 0; background-color: #eaf8ef">
+  <div class="nav-bar">
+    <span *ngFor="let route of routersNames"
+          class="router-btn"
+          routerLink="{{route.name}}"
+          routerLinkActive="active-router-btn">{{route.name}}</span>
+  </div>
+  <hr>
+</div>
+<router-outlet></router-outlet>

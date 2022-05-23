@@ -1,0 +1,11 @@
+<span class="router-btn" routerLink="/shopping cart/suggestions" routerLinkActive="active-router-btn">suggestions</span>
+<router-outlet></router-outlet>
+<div *ngFor="let product of shoppingList" class="product" [routerLink]="['/products', product.id]">
+  <div>
+    <p><b>name: </b>{{product.name}}</p>
+    <p><b>price: </b>{{product.price | currency}}</p>
+  </div>
+  <p class="link remove" (click)="removeProductFromCart(product.id)">remove '{{product.name}}' from the cart</p>
+</div>
+<p *ngIf="totalPrice > 0"><b>Total price: {{totalPrice | currency}}</b></p>
+<p *ngIf="!shoppingList.length">the cart is empty right now.</p>

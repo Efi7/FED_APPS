@@ -1,0 +1,11 @@
+<div class="task-line">
+  <fed-search [originalList]="creditCardBill"
+              [keys]="['transactionName', 'amount']"
+              (filteredList)="filterCreditCardBill($event)"></fed-search>
+  <app-current-bill [currentBill]="CurrentBill()"></app-current-bill>
+</div>
+<div *ngFor="let creditCard of filteredCreditCardBill" class="balance">
+  <p><b>transaction name: </b>{{creditCard.transactionName}}</p>
+  <p><b>amount: </b><span>{{creditCard.amount | currency}}</span></p>
+  <hr>
+</div>

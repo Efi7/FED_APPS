@@ -1,0 +1,24 @@
+.nav-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 40px;
+
+  .router-btn {
+    border: 2px solid transparent;
+    cursor: pointer;
+    color: #5d9696;
+    font-family: "Titillium Web", sans-serif;
+    font-size: 20px;
+
+    &:hover {
+      color: darken(#5d9696, 20%);
+    }
+  }
+
+  .active-router-btn {
+    color: darken(#5d9696, 40%);
+    text-shadow: 0 1px 2px rgba(27, 227, 217, 0.5);
+  }
+}

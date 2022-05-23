@@ -1,0 +1,7 @@
+<div>
+  <p><span>username: </span><input type="text" [(ngModel)]="username"></p>
+  <p><span>password: </span><input type="password" [(ngModel)]="password"></p>
+  <p><span>re-enter password: </span><input type="password" [(ngModel)]="reEnteredPassword"></p>
+  <button [disabled]="!isRegisterActive()" (click)="onRegister()">REGISTER</button>
+  <p>already have an account? <span class="link" (click)="navigate('login')">login</span></p>
+</div>

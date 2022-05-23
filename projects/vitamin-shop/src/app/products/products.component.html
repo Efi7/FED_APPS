@@ -1,0 +1,11 @@
+<fed-search [originalList]="products"
+            [keys]="['name', 'price']"
+            (filteredList)="filterProducts($event)"></fed-search>
+
+<div *ngFor="let product of filteredProducts" class="product"
+     [title]="product.name + ' details'"
+     [routerLink]="['/products', product.id]">
+  <p><b>name: </b>{{product.name}}</p>
+  <p><b>price: </b>{{product.price | currency}}</p>
+</div>
+<p *ngIf="!filteredProducts.length">We can't find product with this value</p>

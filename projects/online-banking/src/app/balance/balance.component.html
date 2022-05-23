@@ -1,0 +1,10 @@
+<fed-search [originalList]="balance"
+            [keys]="['name', 'amount', 'description']"
+            (filteredList)="filterBalance($event)"></fed-search>
+
+<div *ngFor="let balance of filteredBalance" class="balance">
+  <p><b>name: </b>{{balance.name}}</p>
+  <p><b>amount: </b><span>{{balance.amount | currency}}</span></p>
+  <p><b>description: </b>{{balance.description}}</p>
+  <hr>
+</div>
